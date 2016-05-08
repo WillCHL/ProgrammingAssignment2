@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This group of functions calculates inverse matrices and creates a list that 
+## hold functions used for caching matrices that have been loaded into the list.
 
-## Function to create a list of functions
+## Function to create a list of functions that hold the cached inverse matrices
+## in the function's environment.
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -19,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function returns solved inverse matrices.  First it checks for a cached inverse 
+## matrix, if it does not exist it runs solve() to calculate a new one and then stores 
+## it in the list created above.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
